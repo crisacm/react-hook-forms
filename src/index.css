@@ -1,15 +1,18 @@
 body {
-    background-color: #020223;
+    background: linear-gradient(135deg, #121212, #020223);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
+    padding: 20px;
+    min-height: 100vh;
+    overflow-y: auto;
 }
 
 .input-container {
     width: 300px;
     margin: 0 auto;
     margin-top: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .terms {
@@ -22,7 +25,7 @@ body {
 
 .input-label {
     font-size: small;
-    color: white;
+    color: #e0e0e0;
     display: block;
     font-family: system-ui, -apple-system;
 }
@@ -35,40 +38,80 @@ body {
     margin-top: 6px;
     height: auto;
     padding: 6px;
-    background-color: white;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
     width: 100%;
     border-radius: 6px;
-    border: 2px gray solid;
+    border: 1px solid #333;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.7);
+    box-sizing: border-box;
 }
 
 button {
     margin-top: 12px;
     padding: 6px;
-    background-color: #f0f0f0;
+    background-color: #333;
+    color: #e0e0e0;
     width: 100%;
     border-radius: 6px;
-    border: 2px gray solid;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
     cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
 }
 
 button:hover {
-    background-color: #e0e0e0;
+    background-color: #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 
 span {
-    color: rgba(255, 0, 0, 0.847);
+    color: #ff5252;
     font-size: small;
     font-family: system-ui, -apple-system;
-    margin: 12px;
+    margin: 4px 0;
 }
 
 pre {
-    color: white;
+    color: #e0e0e0;
     font-family: system-ui, -apple-system;
     font-size: small;
     margin-top: 12px;
-    background-color: #1e2e59;
-    border: 2px solid #1e2e59;
+    background-color: #272727;
+    border: 1px solid #333;
     border-radius: 6px;
     padding: 12px;
+}
+
+/* Se agrega estilo para el select, unificándolo con el input */
+select {
+    margin-top: 6px;
+    padding: 6px;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #333;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.7);
+    box-sizing: border-box;
+}
+
+/* Estilo para el icono de input Fecha de Nacimiento (input de tipo date) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1) brightness(1.2);
+}
+
+/* Estilo para el input de Choose File */
+input[type="file"]::file-selector-button {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    padding: 6px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+input[type="file"]::file-selector-button:hover {
+    background-color: #444;
 }

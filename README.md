@@ -1,23 +1,25 @@
-# React Hook Forms
+# React Hook Forms Demo
 
-Ejemplo sencillo de un formulario usando React Hook Form con validaciones básicas.
+## About
+A simple demonstration project showcasing the implementation of form handling in React using React Hook Form library. This project serves as a practical example of form validation, error handling, and form state management.
 
-## Instalación
+## Test yourself
+1. Clone this repository
+2. Navigate to the project directory
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+5. Open your browser and visit `http://localhost:5173`
 
-```bash
-npm install
-```
-
-## Ejecución
-
-```bash
-npm run dev
-```
-
-Visita `http://localhost:3000` en tu navegador.
-
-## Tecnologías
-
+## Tech stack
 - React
+- TypeScript
 - React Hook Form
 - Vite
+- Material UI
+- Zod (for schema validation)
